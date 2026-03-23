@@ -1,3 +1,4 @@
 # OWASP Juice Shop Form Copy
-This is a basic HTML and JavaScript login form that mimics Juice Shop’s login page.
-The form includes email and password input fields, client-side validation to prevent empty fields, and a simple JavaScript function that checks if the email contains "@" and the password is at least 8 characters long.
+This is a basic HTML and JavaScript login form that mimics OWASP Juice Shop’s login page.
+
+The form includes email and password input fields, client-side validation to prevent empty fields, and a simple JavaScript function as server-side validation that checks if the email contains "@" and the password is at least 8 characters long.
