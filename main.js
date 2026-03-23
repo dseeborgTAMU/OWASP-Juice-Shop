@@ -1,6 +1,7 @@
 const submitButton = document.getElementById('submitButton')
 const emailInput = document.getElementById('emailInput')
 const passwordInput = document.getElementById('passwordInput')
+const greetingText = document.getElementById('greeting')
 
 let email = 'aaaaaaa'
 let password = 'aaa'
@@ -16,11 +17,15 @@ submitButton.addEventListener('click',  function() {
     // console.log(email)
     // console.log(password)
 
-    if (email === "" && password === "") {
+    if (email === "" || password === "") {
         console.log("Empty fields")
+        greetingText.textContent = "An input field should not be empty when you want to login!"
         return
     }
 
-    if (validEmailAndPassword(email, password)) console.log("Good")
+    if (validEmailAndPassword(email, password)) {
+        console.log("Good")
+        greetingText.innerHTML = "Hello, " + email.slice(0, email.indexOf('@')) + "!"
+    }
     else console.log("Bad")
 })
